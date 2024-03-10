@@ -20,7 +20,6 @@ alias logout='sudo pkill -u $USER'
 PS1='[\u@\h \W]\$ '
 
 # NixOS stuff
-alias nixsearch='nix search nixpkgs'
 alias config='nvim /etc/nixos/configuration.nix'
 alias rebuild='sudo nixos-rebuild switch'
 alias gc='nix-collect-garbage --delete-old'
