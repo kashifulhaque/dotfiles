@@ -22,7 +22,7 @@ PS1='[\u@\h \W]\$ '
 # NixOS stuff
 alias config='nvim /etc/nixos/configuration.nix'
 alias rebuild='sudo nixos-rebuild switch'
-alias gc='nix-collect-garbage --delete-old'
+alias gc='sudo nix-collect-garbage -d'
 alias old='sudo nix-env --list-generations'
 
 # Python stuff
@@ -48,3 +48,6 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export EDITOR="nvim"
+
+# Run freshfetch on start of a new terminal
+freshfetch
