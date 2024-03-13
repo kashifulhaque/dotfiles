@@ -18,3 +18,5 @@ require("vim-options")
 
 -- Lazy.nvim to load plugins
 require("lazy").setup("plugins")
+
+require("mason").setup()
