@@ -20,10 +20,11 @@ alias logout='sudo pkill -u $USER'
 PS1='[\u@\h \W]\$ '
 
 # NixOS stuff
-alias config='nvim /etc/nixos/configuration.nix'
-alias rebuild='sudo nixos-rebuild switch'
-alias gc='sudo nix-collect-garbage -d'
-alias old='sudo nix-env --list-generations'
+alias nix-config='nvim /etc/nixos/configuration.nix'
+alias nix-rebuild='sudo nixos-rebuild switch'
+alias nix-upgrade='sudo nixos-rebuild switch --upgrade'
+alias nix-gc='sudo nix-collect-garbage -d'
+alias nix-old='sudo nix-env --list-generations'
 
 # Python stuff
 alias pyenv='python -m venv .venv'
@@ -34,7 +35,6 @@ alias freeze='python -m pip freeze > requirements.txt'
 # Editing bashrc stuff
 alias bashrc='nvim ~/.bashrc'
 alias src='source ~/.bashrc'
-alias migrate='stow --adopt ~/dotfiles/'
 
 # Docker aliases
 alias up='docker compose up --build -d'
