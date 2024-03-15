@@ -25,3 +25,7 @@ stow --adopt .
 
 ## Wallpapers
 [Wallpapers here](./Pictures/Wallpapers)
+
+
+### Python environment using micromamba
+> Read more about it [here](https://nixos.wiki/wiki/Python#micromamba)
