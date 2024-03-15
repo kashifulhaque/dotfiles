@@ -60,3 +60,5 @@ export EDITOR="nvim"
 
 # Run freshfetch on start of a new terminal
 freshfetch
+
+eval "$(micromamba shell hook -s bash)"
