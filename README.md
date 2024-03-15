@@ -29,3 +29,13 @@ stow --adopt .
 
 ### Python environment using micromamba
 > Read more about it [here](https://nixos.wiki/wiki/Python#micromamba)
+
+1. Run the following commands to enable an FHS-like shell using nix in order to use micromamba
+```bash
+init-mamba
+init-env
+```
+2. Now, we can use micromamba like any other linux distro
+```bash
+micromamba create -n py310 python=3.10 -c conda-forge -y
+```
