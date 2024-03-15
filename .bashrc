@@ -5,19 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Aliases
-alias up='docker compose up --build -d'
-alias down='docker compose down -v'
+# Aliases file listing
 alias ls='eza --group-directories-first --icons'
 alias ll='eza -al --group-directories-first --icons'
-alias yay='yay --noconfirm'
-alias paru='paru --noconfirm'
-alias listpkgs='yay -Qe'
-alias grep='grep --color=auto'
-alias fman='compgen -c | fzf | xargs tldr'
-alias cat='bat -p'
-alias logout='sudo pkill -u $USER'
-PS1='[\u@\h \W]\$ '
 
 # NixOS stuff
 alias nix-config='nvim /etc/nixos/configuration.nix'
@@ -44,6 +34,13 @@ alias src='source ~/.bashrc'
 # Docker aliases
 alias up='docker compose up --build -d'
 alias down='docker compose down -v'
+
+# Other aliases
+alias grep='grep --color=auto'
+alias fman='compgen -c | fzf | xargs tldr'
+alias cat='bat -p'
+alias logout='sudo pkill -u $USER'
+PS1='[\u@\h \W]\$ '
 
 # Add ~/.local/bin to PATH
 export PATH=/home/ifkash/.local/bin:$PATH
