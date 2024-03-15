@@ -32,6 +32,11 @@ alias venv='source .venv/bin/activate'
 alias pipr='python -m pip install -r requirements.txt'
 alias freeze='python -m pip freeze > requirements.txt'
 
+# Python + NixOS + Micromamba
+alias init-mamba='cp ~/fhs_environment.nix .'
+alias init-env='nix-shell fhs_environment.nix'
+alias conda='micromamba'
+
 # Editing bashrc stuff
 alias bashrc='nvim ~/.bashrc'
 alias src='source ~/.bashrc'
