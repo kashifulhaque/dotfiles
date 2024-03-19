@@ -35,6 +35,11 @@ alias src='source ~/.bashrc'
 alias up='docker compose up --build -d'
 alias down='docker compose down -v'
 
+# Git aliases
+alias ga='git add .'
+alias gs='git status'
+alias gi='git init'
+
 # Other aliases
 alias grep='grep --color=auto'
 alias fman='compgen -c | fzf | xargs tldr'
