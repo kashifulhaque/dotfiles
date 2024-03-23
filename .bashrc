@@ -41,6 +41,7 @@ alias gs='git status'
 alias gi='git init'
 
 # Other aliases
+alias download='http --download'
 alias grep='grep --color=auto'
 alias fman='compgen -c | fzf | xargs tldr'
 alias cat='bat -p'
