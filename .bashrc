@@ -40,6 +40,9 @@ alias ga='git add .'
 alias gs='git status'
 alias gi='git init'
 
+# tmux aliases
+alias tmux='tmux -u'
+
 # Other aliases
 alias download='http --download'
 alias grep='grep --color=auto'
