@@ -1,1 +1,2 @@
-
+shell:
+  program: /etc/profiles/per-user/ifkash/bin/zsh
