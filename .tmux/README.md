@@ -1,6 +1,6 @@
 ## tmux keybinds
 
-**Leader button:** `ctrl + b`
+**Leader button:** `ctrl + s`
 
 #### Create a new window
 ```bash
@@ -78,4 +78,10 @@ tmux
 ```bash
 <leader> + :
 :rename-session <session-name>
+```
+
+#### To install plugins using tpm
+> Add the plugins to `~/.tmux.conf` file
+```bash
+<leader> + I (capital eye)
 ```

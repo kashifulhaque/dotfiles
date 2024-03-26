@@ -46,3 +46,14 @@ Ctrl + x, Ctrl + o
 ```bash
 Shift + k
 ```
+
+### To move lines
+**Down**
+```bash
+ddp
+```
+
+**Up**
+```bash
+ddkP
+```
