@@ -17,6 +17,10 @@ Ctrl + f
 ```bash
 Ctrl + n
 ```
+To toggle hidden files on/off
+```bash
+H
+```
 
 ### To switch from file browser menu to file
 ```bash
