@@ -11,6 +11,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Show relative line numbers
+vim.wo.relativenumber = true
+
 local opts = {}
 
 -- Vim options
