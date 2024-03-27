@@ -49,19 +49,10 @@ alias grep='grep --color=auto'
 alias fman='compgen -c | fzf | xargs tldr'
 alias cat='bat -p'
 alias logout='sudo pkill -u $USER'
-PS1='[\u@\h \W]\$ '
-
-# Add ~/.local/bin to PATH
-export PATH=/home/ifkash/.local/bin:$PATH
 
 # Fancy shell prompt
 eval "$(oh-my-posh init bash --config ~/.config/omp/themes/lambda.omp.json)"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export EDITOR="nvim"
 
 # Run freshfetch on start of a new terminal
