@@ -57,3 +57,11 @@ ddp
 ```bash
 ddkP
 ```
+
+### Comment/Uncomment lines
+> Place cursor on the line or `ctrl + v` to highlight and then
+
+```bash
+gcc
+```
+
