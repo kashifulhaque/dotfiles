@@ -52,7 +52,7 @@ alias logout='sudo pkill -u $USER'
 alias mkdir='mkdir -p'
 
 # Fancy shell prompt
-eval "$(oh-my-posh init bash --config ~/.config/omp/themes/lambda.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.config/omp/themes/tokyonight_storm.omp.json)"
 
 export EDITOR="nvim"
 
