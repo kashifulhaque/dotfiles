@@ -65,3 +65,13 @@ ddkP
 gcc
 ```
 
+### To format lines
+Select lines with `shift + v`
+```bash
+=
+```
+
+To format the entire file
+```bash
+gg=G
+```
