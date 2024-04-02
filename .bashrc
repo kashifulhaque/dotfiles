@@ -49,6 +49,7 @@ alias grep='grep --color=auto'
 alias fman='compgen -c | fzf | xargs tldr'
 alias cat='bat -p'
 alias logout='sudo pkill -u $USER'
+alias mkdir='mkdir -p'
 
 # Fancy shell prompt
 eval "$(oh-my-posh init bash --config ~/.config/omp/themes/lambda.omp.json)"
