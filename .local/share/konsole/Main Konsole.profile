@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Wombat
-Font=Fantasque Sans Mono,14,-1,5,50,0,0,0,0,0
+Font=Fantasque Sans Mono,13,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=1

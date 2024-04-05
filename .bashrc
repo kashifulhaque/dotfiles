@@ -50,6 +50,7 @@ alias fman='compgen -c | fzf | xargs tldr'
 alias cat='bat -p'
 alias logout='sudo pkill -u $USER'
 alias mkdir='mkdir -p'
+alias less='moar'
 
 # Fancy shell prompt
 eval "$(oh-my-posh init bash --config ~/.config/omp/themes/tokyonight_storm.omp.json)"
