@@ -44,6 +44,7 @@ alias gi='git init'
 alias tmux='tmux -u'
 
 # Other aliases
+alias copy='rsync -ah --progress'
 alias download='http --download'
 alias grep='grep --color=auto'
 alias fman='compgen -c | fzf | xargs tldr'
