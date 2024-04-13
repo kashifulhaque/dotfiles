@@ -57,24 +57,23 @@ alias less='moar'
 eval "$(oh-my-posh init bash --config ~/.config/omp/themes/tokyonight_storm.omp.json)"
 
 # Add homebrew
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 export EDITOR="nvim"
 
-# Run freshfetch on start of a new terminal
-freshfetch
-
-eval "$(micromamba shell hook -s bash)"
-
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/ifkash/.local/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/ifkash/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ifkash/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    if [ -f "/home/ifkash/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ifkash/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ifkash/miniconda3/bin:$PATH"
+    fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+unset __conda_setup
+# <<< conda initialize <<<
+
+. "$HOME/.cargo/env"
