@@ -56,9 +56,25 @@ alias less='moar'
 # Fancy shell prompt
 eval "$(oh-my-posh init bash --config ~/.config/omp/themes/tokyonight_storm.omp.json)"
 
+# Add homebrew
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+
 export EDITOR="nvim"
 
 # Run freshfetch on start of a new terminal
 freshfetch
 
 eval "$(micromamba shell hook -s bash)"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/ifkash/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/ifkash/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
