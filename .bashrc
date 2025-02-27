@@ -158,6 +158,7 @@ alias bashrc='nvim ~/.bashrc && source ~/.bashrc'
 alias logout='sudo pkill -u $USER'
 alias mkdir='mkdir -p'
 alias tmux='tmux -u'
+alias bat='batcat'
 
 # Set nvim as default editor
 export EDITOR="nvim"
