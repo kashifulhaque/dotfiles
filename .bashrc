@@ -87,10 +87,9 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alhF'
-alias la='ls -A'
-alias l='ls -CF'
+### Aliases for file listing
+alias ls='eza --group-directories-first --icons'
+alias ll='eza -alh --group-directories-first --icons'
 
 # Alias for download
 alias dl='http --download'
@@ -108,6 +107,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+### A file for all the API keys
+if [ -f ~/.api_keys ]; then
+  . ~/.api_keys
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -118,10 +122,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# API Keys
-export GEMINI_API_KEY=AIzaSyBJo2UguLAwoFd_7Muu4ASycZ9unjoKqZY
-export GROQ_API_KEY=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
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -153,9 +153,22 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.cargo/env"
 
-# Some aliases
+### Aliases
+alias bashrc='nvim ~/.bashrc && source ~/.bashrc'
+alias logout='sudo pkill -u $USER'
+alias mkdir='mkdir -p'
+alias tmux='tmux -u'
+
+# Set nvim as default editor
+export EDITOR="nvim"
+
+# SSH into my hetzner VM
 alias ssh-vm='ssh ifkash@vm.ifkash.dev'
+
+### Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+### Deno
 . "/home/amex/.deno/env"
 source /home/amex/.local/share/bash-completion/completions/deno.bash
