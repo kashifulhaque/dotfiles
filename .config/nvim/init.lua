@@ -282,6 +282,14 @@ require('lazy').setup({
     end
   },
 
+  -- Typr plugin: https://github.com/nvzone/typr
+  {
+    "nvzone/typr",
+    dependencies = "nvzone/volt",
+    opts = {},
+    cmd = { "Typr", "TyprStats" },
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
