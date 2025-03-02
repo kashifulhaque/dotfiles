@@ -88,8 +88,32 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 ### Aliases for file listing
-alias ls='eza --group-directories-first --icons'
-alias ll='eza -alh --group-directories-first --icons'
+# Enhanced basic listing with git status if in a repo
+alias ls='eza --header --group-directories-first --icons --git'
+
+# Long listing with additional details
+alias ll='eza -alh --header --group-directories-first --icons --git --time-style=long-iso'
+
+# Tree view (great for visualizing directory structure)
+alias lt='eza --tree --level=2 --icons'
+
+# Sort by most recently modified
+alias lr='eza -lrs modified'
+
+# Sort by file size (largest first)
+alias lS='eza -lrs size'
+
+# List only directories
+alias ld='eza -D --icons'
+
+# Show extended attributes
+alias lx='eza -lha@ --header --icons'
+
+# Grid view (compact listing in columns)
+alias lg='eza -G --icons'
+
+# Show only git status changes
+alias lc='eza --git -l --icons --no-user --no-time --no-filesize --git-ignore'
 
 # Alias for download
 alias dl='http --download'
