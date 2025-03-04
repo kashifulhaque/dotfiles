@@ -53,7 +53,7 @@
           "type": "root"
         },
         {
-          "foreground": "#100e23",
+          "foreground": "#39FF14",
           "style": "plain",
           "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "type": "python"
