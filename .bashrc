@@ -48,7 +48,6 @@ unset __conda_setup
 alias logout='sudo pkill -u $USER'
 alias mkdir='mkdir -p'
 alias tmux='tmux -u'
-alias bat='batcat'
 
 # SSH into my hetzner VM
 alias ssh-vm='ssh ifkash@vm.ifkash.dev'
