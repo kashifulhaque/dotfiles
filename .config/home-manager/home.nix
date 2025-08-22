@@ -18,21 +18,28 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    # Dev tools
     neovim
     uv
     bun
     go
     rustup
     git
+
+    # System details
     neofetch
     htop
+
+    # Utils
     maccy
     stow
-    httpie
     tmux
     eza
-    ripgrep
     fzf
+    ripgrep
+
+    # Other stuff
+    httpie
     starship
   ];
 
