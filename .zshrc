@@ -26,3 +26,8 @@ eval "$(starship init zsh)"
 ### Mac OS Nix pkg manager
 # Build and clean
 alias hm-build='home-manager switch && sudo nix-collect-garbage -d'
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kashif/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
