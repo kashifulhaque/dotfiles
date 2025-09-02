@@ -31,7 +31,7 @@
 
     # Other stuff
     httpie
-    starship
+    oh-my-posh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
