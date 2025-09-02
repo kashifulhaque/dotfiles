@@ -26,6 +26,8 @@
     eza
     fzf
     ripgrep
+    typst
+    ffmpeg
 
     # Other stuff
     httpie
