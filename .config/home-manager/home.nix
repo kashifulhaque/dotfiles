@@ -24,7 +24,9 @@
     stow
     tmux
     eza
+    bat
     fzf
+    glow
     ripgrep
     typst
     ffmpeg
