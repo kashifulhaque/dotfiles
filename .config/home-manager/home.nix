@@ -20,7 +20,6 @@
     htop
 
     # Utils
-    maccy
     stow
     tmux
     eza
