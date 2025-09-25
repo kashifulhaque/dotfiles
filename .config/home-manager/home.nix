@@ -14,6 +14,7 @@
     rustup
     git
     ruff
+    lld_21
 
     # System details
     neofetch
@@ -29,10 +30,13 @@
     ripgrep
     typst
     ffmpeg
+    vhs
+    sox
 
     # Other stuff
     httpie
     oh-my-posh
+    qemu
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

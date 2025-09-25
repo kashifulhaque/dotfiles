@@ -12,6 +12,9 @@ alias ll='eza -alh --header --group-directories-first --icons --git --time-style
 # Alias for download
 alias dl='http --download'
 
+# ALias for qemu
+alias qemu="qemu-system-x86_64"
+
 # Don't generate the __pycache__ folder
 export PYTHONDONTWRITEBYTECODE=1
 
