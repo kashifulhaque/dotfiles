@@ -27,6 +27,15 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Zedokai (Filter Ristretto)"
+    "dark": "Gruvbox Dark Hard"
+  },
+  "relative_line_numbers": true,
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "ty",
+        "! basedpyright"
+      ]
+    }
   }
 }

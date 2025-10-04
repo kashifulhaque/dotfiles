@@ -1,0 +1,66 @@
+# ===== Window =====
+hide_window_decorations titlebar-only
+background_opacity 1.0
+dynamic_padding yes
+window_padding_width 8 6
+initial_window_directory /Users/kashif
+
+# ===== Startup =====
+startup_session ~/.config/kitty/kitty-startup.session
+
+# ===== Font =====
+font_family "GeistMono Nerd Font"
+bold_font   "GeistMono Nerd Font Bold"
+italic_font "GeistMono Nerd Font Italic"
+font_size 14.0
+
+# Alacritty's font.offset.y = 1 -> nudge line height a touch
+adjust_line_height 1
+adjust_column_width 0
+
+# ===== Cursor =====
+cursor_shape underline
+# Alacritty thickness 0.1 (fraction) ≈ very thin; kitty uses pixels
+cursor_thickness 1.0
+# Blink roughly "On" all the time
+cursor_blink_interval 0.6
+cursor_stop_blinking_after 0
+
+# ==== Muted dark / monochrome palette ====
+# background #0f0f0f
+# foreground #dcd7ba
+
+# Normal colors
+# color0  #0f0f0f
+# color1  #af5f5f
+# color2  #87875f
+# color3  #af875f
+# color4  #5f5f87
+# color5  #875f87
+# color6  #5f8787
+# color7  #dcd7ba
+
+# Bright colors
+# color8  #262626
+# color9  #d75f5f
+# color10 #afaf5f
+# color11 #d7af5f
+# color12 #8787af
+# color13 #af87af
+# color14 #87afaf
+# color15 #ffffff
+
+# Selection
+# selection_foreground #0f0f0f
+# selection_background #dcd7ba
+
+# Bell
+# visual_bell_color #af875f
+visual_bell_duration 0.15
+
+
+
+# BEGIN_KITTY_THEME
+# Arthur
+include current-theme.conf
+# END_KITTY_THEME

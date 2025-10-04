@@ -40,4 +40,9 @@ compinit
 ### Oh My Posh prompt
 eval "$(oh-my-posh init zsh --config ~/.config/omp/themes/xtoys.omp.json)"
 
+### Config for LLVM
+export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
+
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/Users/kashif/.bun/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"

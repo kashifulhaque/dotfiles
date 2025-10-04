@@ -15,6 +15,8 @@
     git
     ruff
     lld_21
+    nodejs_24
+    kitty
 
     # System details
     neofetch
@@ -32,6 +34,10 @@
     ffmpeg
     vhs
     sox
+    imagemagick
+    axel
+    jq
+    atac
 
     # Other stuff
     httpie
