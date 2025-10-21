@@ -21,6 +21,7 @@ export PYTHONDONTWRITEBYTECODE=1
 ### Aliases
 alias mkdir='mkdir -p'
 alias tmux='tmux -u'
+alias htop='sudo mactop'
 
 # Set nvim as default editor
 export EDITOR='nvim'
@@ -38,7 +39,7 @@ compinit
 # End of Docker CLI completions
 
 ### Oh My Posh prompt
-eval "$(oh-my-posh init zsh --config ~/.config/omp/themes/xtoys.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/themes/avit.omp.json)"
 
 ### Config for LLVM
 export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
@@ -46,3 +47,12 @@ export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/Users/kashif/.bun/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export TERM=xterm
+export DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/opt/ffmpeg/lib":$DYLD_FALLBACK_LIBRARY_PATH
+
+# Quick kernel registration for Zed/Jupyter
+uvkernel() {
+    local name="${1:-$(basename $PWD)}"
+    uv run python -m ipykernel install --user --name "$name" --display-name "Python ($name)"
+}
+

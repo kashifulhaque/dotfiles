@@ -20,7 +20,7 @@
 
     # System details
     neofetch
-    htop
+    mactop
 
     # Utils
     stow
@@ -31,7 +31,6 @@
     glow
     ripgrep
     typst
-    ffmpeg
     vhs
     sox
     imagemagick
