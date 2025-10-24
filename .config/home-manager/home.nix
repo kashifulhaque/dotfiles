@@ -16,7 +16,7 @@
 
     # System details
     mactop
-    neofetch
+    fastfetch
 
     # Utils
     jq
