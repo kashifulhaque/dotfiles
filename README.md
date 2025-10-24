@@ -1,9 +1,8 @@
-## **My dotfiles**
+## **My dotfiles for MacOS**
 
 ### Tools used
 - GNU stow
-  - Update [`~/.config/home-manager/home.nix`](~/.config/home-manager/home.nix)
-  - Add `stow` to the list of packages
+  - Add `stow` to the list of packages in [`~/.config/home-manager/home.nix`](.config/home-manager/home.nix)
   - Run `home-manager switch`
 
 ### To restore
@@ -12,4 +11,3 @@
 ```shell
 stow .;
 ```
-
