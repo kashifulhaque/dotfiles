@@ -7,41 +7,38 @@
 
   home.packages = with pkgs; [
     # Dev tools
-    neovim
     uv
-    bun
-    go
-    rustup
     git
     ruff
-    lld_21
-    nodejs_24
     kitty
+    lld_21
+    neovim
 
     # System details
-    neofetch
     mactop
+    neofetch
 
     # Utils
+    jq
+    bat
+    eza
+    fzf
+    sox
+    vhs
+    atac
+    axel
+    glow
+    mise
     stow
     tmux
-    eza
-    bat
-    fzf
-    glow
-    ripgrep
     typst
-    vhs
-    sox
+    ripgrep
     imagemagick
-    axel
-    jq
-    atac
 
     # Other stuff
+    qemu
     httpie
     oh-my-posh
-    qemu
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
