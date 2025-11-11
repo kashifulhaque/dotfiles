@@ -7,16 +7,43 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cursor_shape": "underline",
+  "current_line_highlight": "none",
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "project_panel": {
+    "entry_spacing": "standard"
+  },
+  "terminal": {
+    "blinking": "on",
+    "cursor_shape": "underline",
+    "toolbar": {
+      "breadcrumbs": false
+    }
+  },
+  "toolbar": {
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": "standard",
+  "ui_font_family": ".SystemUIFont",
   "ui_font_weight": 400.0,
   "buffer_font_family": "GeistMono Nerd Font Mono",
-  "icon_theme": "Soft Charmed Icons",
+  "icon_theme": "Warm Charmed Icons",
   "disable_ai": true,
   "minimap": {
     "show": "auto"
   },
   "format_on_save": "off",
   "buffer_font_features": {
-    "calt": 0
+    "calt": false
   },
   "telemetry": {
     "metrics": false,
@@ -26,11 +53,7 @@
   "base_keymap": "VSCode",
   "ui_font_size": 16.0,
   "buffer_font_size": 14.0,
-  "theme": {
-    "mode": "system",
-    "light": "Ayu Light",
-    "dark": "Gruvbox Dark Hard"
-  },
+  "theme": "Claude Code Inspired Dark",
   "relative_line_numbers": true,
   "languages": {
     "Python": {

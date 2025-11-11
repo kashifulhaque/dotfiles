@@ -5,14 +5,18 @@
   home.homeDirectory = "/Users/kashif";
   home.stateVersion = "25.05"; ### Do NOT change
 
+  nixpkgs.config.allowUnfree = true;
+
   home.packages = with pkgs; [
     # Dev tools
+    gh
     uv
     git
     ruff
     kitty
     lld_21
     neovim
+    claude-code
 
     # System details
     mactop
@@ -56,8 +60,10 @@
 
     git = {
       enable = true;
-      userName = "kashifulhaque";
-      userEmail = "haque.kashiful7@gmail.com";
+      settings = {
+        user.name = "kashifulhaque";
+        user.email = "haque.kashiful7@gmail.com";
+      };
     };
   };
 }

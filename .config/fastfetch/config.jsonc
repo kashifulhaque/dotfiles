@@ -64,23 +64,6 @@
             "format": "{host-name}"
         },
         {
-            "type": "localip",
-            "key": "│ CLIENT IP  │{$1}",
-            "format": "{ipv4}"
-        },
-        {
-            "type": "localip",
-            "key": "│ MAC ADDR   │{$1}",
-            "format": "{mac} ({ifname})",
-            "showIpv4": false,
-            "showMac": true
-        },
-        {
-            "type": "dns",
-            "key": "│ DNS        │{$1}",
-            "showType": "ipv4"
-        },
-        {
             "type": "title",
             "key": "│ USER       │{$1}",
             "format": "{user-name}"

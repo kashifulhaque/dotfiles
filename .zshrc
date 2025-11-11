@@ -39,7 +39,7 @@ compinit
 # End of Docker CLI completions
 
 ### Oh My Posh prompt
-eval "$(oh-my-posh init zsh --config ~/.config/omp/themes/avit.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/themes/robbyrussell.omp.json)"
 
 ### Mise
 eval "$(mise activate zsh)"
