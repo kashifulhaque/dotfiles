@@ -147,27 +147,23 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/amex/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/amex/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/amex/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/amex/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # Don't generate the __pycache__ folder
 export PYTHONDONTWRITEBYTECODE=1
 
-. "$HOME/.local/bin/env"
+# uv (Python package manager)
+if [ -f "$HOME/.local/bin/env" ]; then
+  . "$HOME/.local/bin/env"
+fi
 
-eval "$(oh-my-posh init bash --config ~/.config/omp/themes/honukai.omp.json)"
+# Quick kernel registration for Jupyter
+uvkernel() {
+    local name="${1:-$(basename $PWD)}"
+    uv run python -m ipykernel install --user --name "$name" --display-name "Python ($name)"
+}
+
+if command -v oh-my-posh &> /dev/null; then
+  eval "$(oh-my-posh init bash --config ~/.config/omp/themes/honukai.omp.json)"
+fi
 
 # go
 export PATH=$PATH:/usr/local/go/bin
@@ -175,7 +171,9 @@ export PATH=$PATH:/usr/local/go/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
 
 ### Aliases
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc'
@@ -187,6 +185,9 @@ alias bat='batcat'
 # Set nvim as default editor
 export EDITOR="nvim"
 
+# To support terminal shortcuts during SSH
+export TERM=xterm-256color
+
 # SSH into my hetzner VM
 alias ssh-vm='ssh ifkash@vm.ifkash.dev'
 
@@ -195,5 +196,9 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 ### Deno
-. "/home/amex/.deno/env"
-source /home/amex/.local/share/bash-completion/completions/deno.bash
+if [ -f "$HOME/.deno/env" ]; then
+  . "$HOME/.deno/env"
+fi
+if [ -f "$HOME/.local/share/bash-completion/completions/deno.bash" ]; then
+  source "$HOME/.local/share/bash-completion/completions/deno.bash"
+fi
