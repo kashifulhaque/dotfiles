@@ -157,7 +157,7 @@ fi
 
 # Quick kernel registration for Jupyter
 uvkernel() {
-    local name="${1:-$(basename $PWD)}"
+    local name="${1:-${PWD##*/}}"
     uv run python -m ipykernel install --user --name "$name" --display-name "Python ($name)"
 }
 
